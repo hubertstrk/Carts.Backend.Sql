@@ -32,6 +32,8 @@ app.post('/api/cart', cart.add)
 app.put('/api/cart/:id', cart.update)
 
 app.get('/api/items/:id', items.all)
+app.delete('/api/item/:id', items.delete)
+app.put('/api/item/:id/:active', items.setState)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
