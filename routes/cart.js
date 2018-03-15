@@ -1,6 +1,5 @@
 const db = require('../data/db')
 
-
 exports.all = function (req, res) {
   db.execute('SELECT * FROM Cart')
   .then((result) => {
@@ -10,7 +9,7 @@ exports.all = function (req, res) {
 
 exports.add = function (req, res) {
   const now = Date.now()
-  db.execute(`INSERT INTO Cart (Title, Shop, CreationDate, IsDeleted) VALUES ('${req.body.title}', '${req.body.shop}', '2026-12-10 00:00:00.000', 0)`)
+  db.execute(`INSERT INTO Cart (Title, Shop, CreationDate, IsDeleted) VALUES ('${req.body.title}', '${req.body.shop}', ${now}, 0)`)
   .then((result) => {
     res.send(result) 
   })
