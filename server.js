@@ -43,6 +43,7 @@ app.put('/api/cart/:id', cart.update);
 app.get('/api/items/:id', items.all);
 app.delete('/api/item/:id', items.delete);
 app.put('/api/item/:id/:active', items.setState);
+app.post('/api/cart/:id/:name', items.add);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

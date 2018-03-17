@@ -21,3 +21,12 @@ exports.delete = function (req, res) {
     res.send(result) 
   })
 }
+
+exports.add = function (req, res) {
+  console.info(req.params.id)
+  console.info(req.params.name)
+  db.execute(`INSERT INTO CartItem (CartId, Name, IsActive, IsDeleted) VALUES ('${req.params.id}', '${req.params.name}', 1, 0)`)
+  .then((result) => {
+    res.send(result) 
+  })
+}

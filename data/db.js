@@ -17,7 +17,7 @@ const config = {
 
 exports.execute = function (query) {
 
-  // console.info(query)
+  console.info(query)
   return new Promise(function(resolve, reject) {
     const connection = new Connection(config)
     connection.on('connect', function (err) {
