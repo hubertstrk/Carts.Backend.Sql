@@ -1,20 +1,29 @@
 {
-  "name": "carts.backend.sql",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "start": "node ./bin/www"
-  },
+  "name": "WebMatrixExpressSite",
+  "version": "0.2.0",
+  "author": "The WebMatrix Team <webmatrix@microsoft.com>",
+  "description": "A simple boilerplate for building node applications on Windows Azure (or wherever)",
+  "contributors": [
+    {
+      "name": "Microsoft",
+      "email": "appgal@microsoft.com"
+    }
+  ],
+  "main": "./server.js",
+  "keywords": [
+    "azure",
+    "boilerplate",
+    "express"
+  ],
   "dependencies": {
-    "async": "^2.6.0",
-    "body-parser": "~1.18.2",
-    "cookie-parser": "~1.4.3",
     "cors": "^2.8.4",
-    "debug": "~2.6.9",
-    "express": "~4.15.5",
-    "morgan": "~1.9.0",
-    "pug": "2.0.0-beta11",
-    "serve-favicon": "~2.4.5",
+    "express": "~3.1.0",
+    "jade": "*",
     "tedious": "^2.3.1"
+  },
+  "noAnalyze": true,
+  "license": "Apache",
+  "engines": {
+    "node": "~0.10.0 || ~4.2.0"
   }
 }
